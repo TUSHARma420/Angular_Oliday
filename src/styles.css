@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+body {
+    background-image: url('/assets/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

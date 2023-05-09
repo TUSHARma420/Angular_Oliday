@@ -1,0 +1,160 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+section.text-gray-600 {
+    font-family: sans-serif;
+    color: #4B5563;
+}
+
+.container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.-mx-4 {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.mb-auto {
+    margin-bottom: auto;
+}
+
+.lg\:w-1\/2 {
+    width: 50%;
+}
+
+.sm\:w-2\/3 {
+    width: 66.666667%;
+}
+
+.content-start {
+    align-content: flex-start;
+}
+
+.menu-button {
+    background: white;
+    border: black;
+    border-color: #8d8a8a;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20;
+    padding: 20;
+    transition: all 0.2s ease-in-out;
+}
+
+.btnn {
+    display: block;
+    margin: 0 auto;
+    background-color: #2d2d2d;
+    /* Set the background color */
+    border: none;
+    /* Remove the border */
+    color: white;
+    /* Set the text color */
+    padding: 16px 32px;
+    /* Add padding */
+    text-align: center;
+    /* Center the text */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 16px;
+    /* Set the font size */
+    border-radius: 8px;
+    /* Round the corners */
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.25);
+    /* Add a shadow */
+    transition: all 0.3s ease-in-out;
+    /* Add transition effects */
+}
+
+.btnn:hover {
+    background-color: #3e3e3e;
+    /* Change the background color on hover */
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.25);
+    /* Add a larger shadow on hover */
+    transform: translateY(-2px);
+    /* Move the button up on hover */
+}
+
+.menu-nav {
+    background: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    max-height: default;
+    overflow: left;
+    transition: max-height 0.2s ease-out;
+}
+
+.menu-nav.menu-expanded {
+    transition: max-height 0.6s ease-in-out;
+    max-height: 400px;
+}
+
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.6s ease-out;
+    max-height: 400px;
+}
+
+.menu-item {
+    left: 0;
+}
+
+.menu-item:hover {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.6s ease-out;
+    max-height: 400px;
+}
+
+.menu-link {
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    transition: background 0.2s ease-out;
+}
+
+.menu-link:hover {
+    background: #686767;
+}
+
+.menu-nav.show {
+    left: 0;
+}

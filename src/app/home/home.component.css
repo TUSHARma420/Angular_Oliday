@@ -1,0 +1,108 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+.component-background {
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgtZ-siq6L6K5dN5glLieVy9vKWnEvFaTrWHg5rGSmx-x_JLH_fCzjkS1WnoExvknnYl4B6OtHfOS-9DjGyWufxOFjxP6WlrnT1rLIq9HODfm0UQ8SffUAOwkwAN_4ag44yKUMfS-oOzrMa7jNrogxVYgvHabvEePbpnt3QOjP_mgNWOkrwEq0SvEoTQ/s1600/Feminine-butterfly-4k-12202022.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+button {
+    background-color: #4d4dff;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    left: 17%;
+}
+
+  
+button:hover {
+    background-color: #0070f3;
+    cursor: pointer;
+}
+a:hover {
+    background-color: #0070f3;
+    cursor: pointer;
+}
+
+.menu-button {
+    background: rgb(109, 107, 107);
+    border: black;
+    border-color: #8d8a8a;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20;
+    padding: 20;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-nav {
+    background: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    max-height: default;
+    overflow: left;
+    transition: max-height 0.2s ease-out;
+}
+
+.menu-nav.menu-expanded {
+    transition: max-height 0.6s ease-in-out;
+    max-height: 400px;
+}
+
+.menu-list {
+    list-style: none;
+    margin: default;
+    padding: 0;
+    transition: max-height 0.6s ease-out;
+    max-height: 400px;
+}
+
+.menu-item {
+    left: 0;
+}
+
+.menu-item:hover {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.6s ease-out;
+    max-height: 900px;
+}
+
+.menu-link {
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    transition: background 0.2s ease-out;
+}
+
+.menu-link:hover {
+    background: #686767;
+}
+
+.menu-nav.show {
+    left: default;
+}
+
+
+/* from oliday */
+
+
+/* new  */
+
+
+/* 
+.component {
+    background-image: url('../assets/images/1.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+} */

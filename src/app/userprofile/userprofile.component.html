@@ -1,0 +1,143 @@
+<header>
+  <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+    <div
+      class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+    >
+      <a (click)="toggleHome()" class="flex items-center">
+        <img
+          src="https://i.pinimg.com/originals/30/11/b2/3011b2705563a38655c2b37ce0db6ed1.png"
+          class="mr-3 h-6 sm:h-9"
+          alt="Flowbite Logo"
+        />
+        <span
+          class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+          >Oliday</span
+        >
+      </a>
+      <div class="flex items-center lg:order-2">
+        <a
+          (click)="toggleHome()"
+          class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+          >Back to Home
+        </a>
+      </div>
+      <div
+        class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+        id="mobile-menu-2"
+      ></div>
+    </div>
+  </nav>
+</header>
+
+
+<section class="text-gray-600 body-font">
+  <div
+    class="container mx-auto flex px-5 py-24 items-center justify-center flex-col"
+  >
+    <img
+      class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
+      alt="hero"
+      src="https://media.licdn.com/dms/image/D4D03AQE0C3xFRlFFog/profile-displayphoto-shrink_800_800/0/1670933683284?e=1687392000&v=beta&t=Jaxwt9_mDl8I5w2NwFCE3NqOkRi4fvCowbTJFN_eQj0"
+    />
+    <div class="text-center lg:w-2/3 w-full">
+      <h1
+        class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
+      >
+      {{ userName }}
+      </h1>
+      <div class="user-details">
+        
+        <p class="user-email"><b>Email:</b> {{userEmail}}</p>
+        <div class="user-address">
+          <span class="phone-label">Phone:</span>
+          <span class="phone-label">{{userPhone}}</span>
+        </div>
+        <div class="user-address">
+          <span class="address-label">Address:</span>
+          <span class="address-line">A-106</span>
+          <span class="address-line">Parklane</span>
+          <span class="address-city">Sus Gaon </span>,
+          <span class="address-state">Pune</span>
+          <span class="address-zip">413324</span>
+        </div>
+      </div>
+      <p class="mb-8 leading-relaxed"></p>
+    </div>
+    <div class="flex flex-wrap -m-4 text-center">
+      <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+        <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="text-indigo-500 w-12 h-12 mb-3 inline-block"
+            viewBox="0 0 24 24"
+          >
+            <path d="M8 17l4 4 4-4m-4-5v9"></path>
+            <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
+          </svg>
+          <h2 class="title-font font-medium text-3xl text-gray-900"></h2>
+          <p class="leading-relaxed"></p>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+        <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="text-indigo-500 w-12 h-12 mb-3 inline-block"
+            viewBox="0 0 24 24"
+          >
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+          </svg>
+          <h2 class="title-font font-medium text-3xl text-gray-900"></h2>
+          <p class="leading-relaxed"></p>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+        <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="text-indigo-500 w-12 h-12 mb-3 inline-block"
+            viewBox="0 0 24 24"
+          >
+            <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+            <path
+              d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"
+            ></path>
+          </svg>
+          <h2 class="title-font font-medium text-3xl text-gray-900"></h2>
+          <p class="leading-relaxed"></p>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+        <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="text-indigo-500 w-12 h-12 mb-3 inline-block"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <h2 class="title-font font-medium text-3xl text-gray-900"></h2>
+          <p class="leading-relaxed"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

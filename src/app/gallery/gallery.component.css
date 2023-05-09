@@ -1,0 +1,30 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+.text-abc {
+    margin-top: 42px;
+}
+/* Popup Styling */
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #444343;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px #f2f2f2;
+}
+  
+button:hover {
+  background-color: #005fa3;
+  cursor: pointer;
+}
+  /* To adjust the length of the list of recent blog posts, you can add a max-width or width property to the ul element, like this: */
+  
+  ul {
+    max-width: 800px; /* Adjust max-width to change the length of the list */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }

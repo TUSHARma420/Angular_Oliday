@@ -1,0 +1,109 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+body {
+    font-family: 'Work Sans', sans-serif;
+    box-sizing: content-box;
+}
+
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #444343;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px #f2f2f2;
+}
+.faq-heading {
+    border-bottom: #777;
+    padding: 20px 60px;
+}
+
+.faq-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hr-line {
+    width: 60%;
+    margin: auto;
+}
+
+
+/* Style the buttons that are used to open and close the faq-page body */
+
+.faq-page {
+    /* background-color: #eee; */
+    cursor: pointer;
+    width: 60%;
+    border: 1px solid black;
+    outline: none;
+    transition: 0.4s;
+    margin-bottom: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    font-size: 17px;
+    font-weight: 400;
+    padding-left: 15px;
+    padding: 14px 3px;
+    color: #0c0c0c;
+}
+
+.faq-body {
+    margin-left: 300px;
+    /* text-align: center; */
+    width: 50%;
+    padding: 10px 10px;
+}
+
+.hr-lastline {
+    margin-bottom: 30px;
+    width: 60%;
+    margin-left: 305px;
+}
+
+button:hover {
+    background-color: #005fa3;
+    cursor: pointer;
+  }
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+.faq-page:hover {
+    background-color: rgb(165, 152, 152);
+}
+
+.centre {
+    text-align: center;
+    margin-bottom: 2px;
+    padding-left: 20pc;
+    padding-right: 20pc;
+}
+
+
+/* Style the faq-page panel. Note: hidden by default */
+
+.faq-body {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}

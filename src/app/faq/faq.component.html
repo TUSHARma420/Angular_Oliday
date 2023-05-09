@@ -1,0 +1,166 @@
+<!-- <div class="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center"> -->
+
+<!-- <button class=" bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-2 rounded inline-flex items-center" (click)="toggleNav()">Menu</button> -->
+
+
+<!-- </div> -->
+
+
+
+
+
+<!-- header -->
+
+
+
+<header>
+    <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+            <a (click)="toggleHome()" class="flex items-center">
+                <img src="https://i.pinimg.com/originals/30/11/b2/3011b2705563a38655c2b37ce0db6ed1.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Oliday</span>
+            </a>
+            <div class="flex items-center lg:order-2">
+                <a (click)="toggleHome()" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Back to Home
+                </a>
+                <a href="#" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
+                </a>
+                <button (click)="toggleNav()" data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="mobile-menu-2" aria-expanded="false">
+
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!------- FAQ'S ------->
+
+<h1>Frequently Asked Questions</h1>
+<section class="faq-container">
+    <div class="faq-one">
+      
+      
+<div *ngFor="let question of questions">
+  <h3 class="faq-page" (click)="toggleAnswer(question)">{{ question.title }}</h3>
+  <div *ngIf="question.showAnswer">
+    <p class="centre">{{ question.answer }}</p>
+  </div>
+</div>
+
+
+
+<!------- FAQ'S ------->
+
+<!-- <section class="faq-container">
+    <div class="faq-one">
+      
+        <h1 class="faq-page">Do I need to confirm my booking?</h1>
+       
+        <div class="centre">
+            <p>No, you don't. if you really want to, though, contact us at Oliday@help.com to confirm your reservation. You can also contact the hotel directly if you prefer.
+            </p>
+        </div>
+    </div>
+    <hr class="hr-line">
+    <div class="faq-two">
+       
+        <h1 class="faq-page">What if I don't get a confirmation at the time of booking?</h1>
+ 
+        <div class="centre">
+            <p>If a confirmation page doesn't display once you complete your booking, check your email for a confirmation an email confirmation within ten minutes, let us know at Oliday@help.com and we'll send you your confirmation details
+            </p>
+        </div>
+    </div>
+    <hr class="hr-line">
+    <div class="faq-three">
+       
+        <h1 class="faq-page">I didn't get an email confirmation. What do I do?</h1>
+        
+        <div class="centre">
+            <p>If you don't receive an email after making a reservation, it could be that we have the wrong email address or Internet Service Provider blocked the email thinking it was spam (junk mail? from us? perish the thought), Ch folder, just in case,
+                and add our email address Oliday@help.com - to your address book so that it doesn't get filtered out next time. In the meantime, contact us at Oliday@help.com So we can send you an email confirmation. Be sure to include the following information:
+                <br> 1. The name the reservation was booked under
+                <br> 2. The hotel name and location (city)
+                <br> 3. The check-in/check-out dates.
+            </p>
+        </div>
+    </div>
+    <hr class="hr-line">
+    <div class="faq-four">
+        
+        <h1 class="faq-page">What is my hotel's check-in time?</h1>
+        
+        <div class="centre">
+            <p>Typically, the hotel check-in time is after 2:00 pm (local hotel time). Check with your specific hotel for its exact check-in time</p>
+        </div>
+    </div>
+    <hr class="hr-line">
+    <div class="faq-five">
+        <h1 class="faq-page">Will the hotel hold my room if I'm arriving late?</h1>
+        <div class="centre">
+            <p>Since your reservation is guaranteed with a credit cord, the hotel is obliged to hold your room until 7 am the day after your planned arrival date.
+            </p>
+        </div>
+    </div>
+    <hr class="hr-line">
+    <div class="faq-six">
+        <h1 class="faq-page">Do I have to show ID proof at the time of check-in?</h1>
+        <div class="centre">
+            <p>Yes, below are the applicable government issued photo-ids accepted by the hotel Voter ID •Driving License Passport A valid Photo ID has to be canied by every person above the age of 15 staying at the noter Accommodation can be denied if
+                <br> 1. guests posing as a couple if suitable proof of identification is not presented at check<br> 2. quest is a localite as the hotel reserves the right of admission.
+            </p>
+        </div>
+    </div>
+    <hr class="hr-line">
+    <div class="faq-seven">
+        <h1 class="faq-page">What are the cancellation charges?</h1>
+        <div class="centre">
+            <p>Short answer-it depends. Long answer-the cancellation charges depend on the hotel, time of stay ('season' time, 'off season' time), and time of cancellation. To know what's applicable in your case, check the hotel's booking policy mentioned
+                on the booking page while making the reservation (in case you missed it, you can always sign in to your Oliday Account and check it out on your Trips pages). Apart from the cancellation charges levied by the hotel, Oliday charges a fee
+                of Rs. 300 for every hotel cancellation.</p>
+        </div>
+    </div>
+    <hr class="hr-line">
+
+    <div class="faq-eight">
+        <h1 class="faq-page">If I need to cancel my hotel booking, what's the latest I can do this by?</h1>
+        <div class="centre">
+            <p>It depends on your hotel. Please go through the hotel's booking policy mentioned on the booking page while making the reservation (in case you missed it, you can always sign in to your Oliday Account and check it out on your Trips pages).
+                However, please keep in mind that irrespective of what the hotel's booking policy says, you cannot cancel your booking on the day that you're supposed to check-in.</p>
+        </div>
+    </div>
+    <hr class="hr-line">
+    <div class="faq-nine">
+        <h1 class="faq-page">How will get my money back after cancelling a hotel booking?</h1>
+        <div class="centre">
+            <p>We will credit the money back to the same account you used while making the booking. For example, if you used your credit card, we will make an appropriate charge reversal. If you used your debit card, we will credit the money back to the
+                debit card.</p>
+        </div>
+    </div>
+    <hr class="hr-line">
+    <div class="faq-ten">
+        <h1 class="faq-page">How do I modify a hotel booking?</h1>
+        <div class="centre">
+            <p>Oliday doesn't support modifications to hotel bookings. You'll have to cancel your existing booking and make a new one.</p>
+        </div>
+    </div>
+    <hr class="hr-lastline">
+
+
+</section> -->
+
+<!------ Footer ------->

@@ -1,0 +1,303 @@
+<nav class="menu-nav" [hidden]="!menuExpanded">
+  <div>
+    <button
+      data-drawer-target="logo-sidebar"
+      data-drawer-toggle="logo-sidebar"
+      aria-controls="logo-sidebar"
+      type="button"
+      class="menu-nav"
+      class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+    >
+      <span class="sr-only">Open sidebar</span>
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+        ></path>
+      </svg>
+    </button>
+
+    <aside
+      id="logo-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <a (click)="goUser()" class="flex items-center pl-2.5 mb-5">
+          <img
+            (click)="goUser()"
+            src="https://media.licdn.com/dms/image/D4D03AQE0C3xFRlFFog/profile-displayphoto-shrink_100_100/0/1670933683284?e=1686787200&v=beta&t=z8gxiFmOPnPVMhFKwyavHd9p9KIXjogC6wGPmZ68s6o"
+            class="h-6 mr-3 sm:h-7"
+            alt="Flowbite Logo"
+          />
+          <span
+            class="self-center text-x2 mr-font-semibold whitespace-nowrap dark:text-white"
+            >{{userName}}</span
+          >
+        </a>
+        <ul class="space-y-2 font-medium">
+          <li>
+            <a
+              (click)="toggleNav()"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="ml-3">Close menu</span>
+            </a>
+          </li>
+          <li>
+            <a
+              (click)="goBooknow()"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              <svg
+                aria-hidden="true "
+                class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                fill="currentColor "
+                viewBox="0 0 20 20 "
+                xmlns="http://www.w3.org/2000/svg "
+              >
+                <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z "></path>
+                <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z "></path>
+              </svg>
+              <span class="ml-3">Book Now</span>
+            </a>
+          </li>
+          <li>
+            <a
+              (click)="goContactus()"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              <svg
+                aria-hidden="true "
+                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                fill="currentColor "
+                viewBox="0 0 20 20 "
+                xmlns="http://www.w3.org/2000/svg "
+              >
+                <path
+                  d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2
+                            2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z "
+                ></path>
+              </svg>
+              <span class="flex-1 ml-3 whitespace-nowrap">Contact Us</span>
+            </a>
+          </li>
+          <li>
+            <a
+              (click)="goGallery()"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              <svg
+                aria-hidden="true "
+                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                fill="currentColor "
+                viewBox="0 0 20 20 "
+                xmlns="http://www.w3.org/2000/svg "
+              >
+                <path
+                  d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z "
+                ></path>
+                <path
+                  d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z "
+                ></path>
+              </svg>
+              <span class="flex-1 ml-3 whitespace-nowrap">Gallery</span>
+            </a>
+          </li>
+          <li>
+            <a
+              (click)="goUser()"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              <svg
+                aria-hidden="true "
+                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                fill="currentColor "
+                viewBox="0 0 20 20 "
+                xmlns="http://www.w3.org/2000/svg "
+              >
+                <path
+                  fill-rule="evenodd "
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z "
+                  clip-rule="evenodd "
+                ></path>
+              </svg>
+              <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="flex-1 ml-3 whitespace-nowrap"> </span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="flex-1 ml-3 whitespace-nowrap"> </span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="flex-1 ml-3 whitespace-nowrap"> </span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="flex-1 ml-3 whitespace-nowrap"> </span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="flex-1 ml-3 whitespace-nowrap"> </span>
+            </a>
+          </li>
+          <li>
+            <a
+              (click)="goBack()"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              <svg
+                aria-hidden="true "
+                class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                fill="currentColor "
+                viewBox="0 0 20 20 "
+                xmlns="http://www.w3.org/2000/svg "
+              >
+                <path
+                  fill-rule="evenodd "
+                  d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z "
+                  clip-rule="evenodd "
+                ></path>
+              </svg>
+              <span class="flex-1 ml-3 whitespace-nowrap">Sign Out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</nav>
+
+<!-- header -->
+
+<header>
+  <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+    <div
+      class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+    >
+      <a (click)="toggleHome()" class="flex items-center">
+        <img
+          src="https://i.pinimg.com/originals/30/11/b2/3011b2705563a38655c2b37ce0db6ed1.png"
+          class="mr-3 h-6 sm:h-9"
+          alt="Flowbite Logo"
+        />
+        <span
+          class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+          >Oliday</span
+        >
+      </a>
+      <div class="flex items-center lg:order-2">
+        <a
+          (click)="toggleAboutus()"
+          class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+          >About Us
+        </a>
+        <a
+          (click)="togglefaq()"
+          class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+          >FAQ
+        </a>
+
+        <a
+          class="nav-link"
+          (click)="toggleNav()"
+          class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+          >Menu
+          <button
+            data-collapse-toggle="mega-menu-icons"
+            type="button"
+            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="mega-menu-icons"
+            aria-expanded="false"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </a>
+      </div>
+      <div
+        class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+        id="mobile-menu-2 "
+      ></div>
+    </div>
+  </nav>
+</header>
+<div class="component-background">
+  <section class="text-gray-600 body-font">
+    <div
+      class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
+    >
+      <div
+        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+      >
+        <h1
+          class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
+        >
+          Holiday Planing? <br class="hidden lg:inline-block" />No problem, we
+          are here to serve you
+        </h1>
+        <p class="mb-8 leading-relaxed">
+          Get ready for holidays with us and live at the fullest.Book Hotels
+          Mansions and much more from Ous website. We also Provide Vlogs that
+          help ou find amazing places
+        </p>
+        <div class="blue flex justify-start">
+          <button
+            (click)="goBooknow()"
+            class="ml-7 inline-flex text-blue-700 bg-blue-100 border-1px py-2 px-6 focus:outline-none hover:bg-red-200 rounded text-2xl"
+          >
+            Book Now
+          </button>
+        </div>
+      </div>
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img
+          class="object-cover object-center rounded"
+          src="https://source.unsplash.com/720x600/?hotels,holiday,nature,beaches"
+          alt="hero"
+          id="natureImage"
+        />
+      </div>
+    </div>
+  </section>
+</div>

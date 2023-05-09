@@ -1,0 +1,66 @@
+<header>
+    <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+            <a (click)="toggleHome()" class="flex items-center">
+                <img src="https://i.pinimg.com/originals/30/11/b2/3011b2705563a38655c2b37ce0db6ed1.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Oliday</span>
+            </a>
+            <div class="flex items-center lg:order-2">
+                <a (click)="toggleHome()" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Back to Home
+                </a>
+
+
+            </div>
+            <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="location">
+
+
+    <h1>Our Location</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.43816306241!2d73.74846191489328!3d18.554274587389404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf68981e5727%3A0xd3d192e0604fa736!2sParklane%20Urbanjoy!5e0!3m2!1sen!2sin!4v1666899194538!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col">
+            <div>
+                <span>
+                    <i class="fa-solid fa-house"></i>
+
+                    <h5>Parklane Urbanjoy, Sus Road</h5>
+                    <p>Pune, Maharashtra, IN</p>
+                </span>
+            </div>
+            <div>
+                <span>
+                    <i class="fa-solid fa-phone"></i>
+                    <h5>8899391073</h5>
+                    <p>Monday to Saturday, 10AM to 6PM</p>
+                </span>
+            </div>
+            <div>
+                <span>
+                    <i class="fa-solid fa-envelope"></i>
+                    <h5>oliday2022@gmail.com</h5>
+                    <p>Email Us for query</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="contact-col">
+            <form action="form-handler.php" method="post">
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                <input type="text" name="message" placeholder="Enter your city" required>
+                <textarea placeholder="Message" cols="30" rows="10"></textarea>
+                <button (click)="submitt()" type="submit" class="buttonn">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>

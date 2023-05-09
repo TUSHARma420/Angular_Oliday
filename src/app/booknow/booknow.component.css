@@ -1,0 +1,190 @@
+                    @import 'tailwindcss/base';
+                    @import 'tailwindcss/components';
+                    @import 'tailwindcss/utilities';
+                    .component-background {
+                        background-image: rgb(252, 252, 252);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                      }
+                      button:hover {
+                        background-color: #005fa3;
+                        cursor: pointer;
+                      }
+                    h1 {
+                        font-size: 36px;
+                        font-weight: bold;
+                        color: #444343;
+                        margin-bottom: 30px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        text-shadow: 2px 2px #f2f2f2;
+                    }
+                    /* CSS for the city select */
+                    /* Style for selected cities */
+                    /* Styles for the city select dropdown */
+                    /* Styles for the city selection */
+                    
+                    .city-select-container {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                    }
+                    
+                    .city-select-container label {
+                        margin-right: 10px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #333;
+                    }
+                    
+                    .city-select-dropdown {
+                        display: flex;
+                        align-items: center;
+                        border: 2px solid #8bc34a;
+                        border-radius: 5px;
+                        padding: 10px;
+                        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+                        background-color: #f5f5f5;
+                    }
+                    
+                    .selected-city {
+                        display: inline-block;
+                        padding: 5px 10px;
+                        margin-right: 10px;
+                        background-color: #fff;
+                        border-radius: 4px;
+                        border: 2px solid #8bc34a;
+                        cursor: pointer;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    
+                    .selected-city:hover {
+                        background-color: #8bc34a;
+                        color: #fff;
+                    }
+                    
+                    .selected-city.selected {
+                        background-color: #8bc34a;
+                        color: #fff;
+                    }
+                    
+                    .selected-city.selected:before {
+                        content: "\2713";
+                        margin-right: 5px;
+                    }
+                    /* Styles for the hotel cards */
+                    
+                    .hotel-card {
+                        margin-bottom: 30px;
+                        border-radius: 5px;
+                        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+                        overflow: hidden;
+                    }
+                    
+                    .hotel-card-image {
+                        position: relative;
+                        height: 250px;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    
+                    .hotel-card-image:before {
+                        content: "";
+                        display: block;
+                        padding-bottom: 56.25%;
+                        /* 16:9 aspect ratio */
+                    }
+                    
+                    .hotel-card-content {
+                        padding: 20px;
+                        background-color: #fff;
+                    }
+                    
+                    .hotel-card-title {
+                        font-size: 24px;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                        color: #333;
+                    }
+                    
+                    .hotel-card-description {
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                        color: #555;
+                    }
+                    
+                    .hotel-card-price {
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: #8bc34a;
+                        margin-top: 10px;
+                    }
+                    
+                    .hotel-card-link {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        background-color: #8bc34a;
+                        color: #fff;
+                        border-radius: 4px;
+                        text-decoration: none;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    
+                    .hotel-card-link:hover {
+                        background-color: #fff;
+                        color: #8bc34a;
+                        border: 2px solid #8bc34a;
+                    }
+                    /* Media Queries */
+                    
+                    @media screen and (max-width: 768px) {
+                        .hotel-card {
+                            width: 100%;
+                        }
+                    }
+                    
+                    @media screen and (max-width: 480px) {
+                        .hotel-card-title {
+                            font-size: 20px;
+                        }
+                    }
+                    /* label {
+                    padding-left: 10px;
+                    font-size: 18px;
+                    font-weight: bold;
+                } */
+                    /* select {
+                    font-size: 16px;
+                    padding: 12px 24px;
+                    margin: 10px 10px;
+                    border: 2px solid #444343;
+                    border-radius: 8px;
+                    box-sizing: border-box;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+                    background-position: calc(100% - 15px) center;
+                    background-repeat: no-repeat;
+                    width: 300px;
+                    height: 48px;
+                    color: #444343;
+                    font-weight: bold;
+                    font-family: Arial, sans-serif;
+                    text-transform: uppercase;
+                    text-align: center;
+                    transition: all 0.2s ease-in-out;
+                }
+                
+                select:hover {
+                    border-color: #d50e0e;
+                } */
+                    /* select:focus { */
+                    /* outline: none; */
+                    /* Remove the default focus outline */
+                    /* border-color: #007bff; */
+                    /* Change the border color on focus */
+                    /* box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); */
+                    /* Add a box shadow on focus */
+                    /* } */

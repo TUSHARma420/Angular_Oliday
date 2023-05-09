@@ -1,0 +1,77 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.component-background {
+    background-image: url('https://wallpaperaccess.com/full/446984.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+body {
+    background-image: url('/assets/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+h5 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 5px;
+}
+button:hover {
+    
+    cursor: pointer;
+}
+
+label {
+    color: #fff;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    background-color: #e8e7e7;
+    border: none;
+    padding: 0.5rem;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+button {
+    background-color: #fff;
+    color: #222;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.my-text:hover {
+    cursor: pointer;
+}
+
+.a {
+    color: white;
+}
+
+.centre {
+    text-align: center;
+    margin-bottom: 2px;
+    padding: 2pc;
+}

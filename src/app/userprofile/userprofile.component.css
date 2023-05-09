@@ -1,0 +1,120 @@
+button:hover {
+    
+    cursor: pointer;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .user-avatar img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .user-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .user-email {
+    font-size: 1.125rem;
+    margin: 0.25rem 0;
+  }
+  
+  .user-phone {
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    margin: 0.25rem 0;
+  }
+  
+  .phone-label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  
+  .phone-number {
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    margin: 0.25rem 0;
+  }
+  
+  .user-address {
+    font-size: 1.125rem;
+    margin: 0.25rem 0;
+  }
+  
+  .address-label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  
+  .address-line {
+    display: block;
+  }
+  
+  .address-city {
+    margin-right: 0.5rem;
+  }
+  
+  .address-state {
+    margin-right: 0.25rem;
+  }
+  
+  .address-zip {
+    margin-right: 0.5rem;
+  }
+
+  .container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+  }
+  
+  .title-font {
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+  
+  .user-details {
+    margin-top: 40px;
+  }
+  
+  .user-email,
+  .user-phone,
+  .user-address {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .phone-label,
+  .address-label {
+    font-weight: bold;
+    display: inline-block;
+    width: 80px;
+  }
+  
+  .address-line,
+  .address-city,
+  .address-state,
+  .address-zip {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .address-line:last-child,
+  .address-city:last-child,
+  .address-state:last-child,
+  .address-zip:last-child {
+    margin-right: 0;
+  }
+  
+  

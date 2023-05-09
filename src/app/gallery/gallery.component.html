@@ -1,0 +1,257 @@
+<header>
+  <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+    <div
+      class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+    >
+      <a (click)="toggleHome()" class="flex items-center">
+        <img
+          src="https://i.pinimg.com/originals/30/11/b2/3011b2705563a38655c2b37ce0db6ed1.png"
+          class="mr-3 h-6 sm:h-9"
+          alt="Flowbite Logo"
+        />
+        <span
+          class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+          >Oliday</span
+        >
+      </a>
+      <div class="flex items-center lg:order-2">
+        <button class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800" (click)="openPopup()">Add Blog Post</button>
+      </div>
+      <div class="flex items-center lg:order-2">
+        <a
+          (click)="toggleHome()"
+          class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+          >Back to Home
+        </a>
+      </div>
+      <div
+        class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+        id="mobile-menu-2"
+      ></div>
+    </div>
+  </nav>
+</header>
+
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <div class="flex w-full mb-20 flex-wrap">
+      <h1
+        class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4"
+      >
+        Gallery And Blogs About Places
+      </h1>
+      <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">
+        Here You find new places and people experience in the form of vlogs about different places. Use their experience to find out more details about new, existing and adventurous places.
+      </p>
+    </div>
+  
+    
+     
+
+    <div *ngIf="showPopup">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">Add Blog Post</h2>
+          <form (submit)="addBlogPost()">
+            <label class="block font-medium mb-1">Name:</label>
+            <input type="text" [(ngModel)]="newBlogPost.name" name="name" required class="w-full border border-gray-300 rounded-lg px-3 py-2 mb-4">
+            <label class="block font-medium mb-1">Image URL:</label>
+            <input type="text" [(ngModel)]="newBlogPost.image" name="image" required class="w-full border border-gray-300 rounded-lg px-3 py-2 mb-4">
+            <label class="block font-medium mb-1">Title:</label>
+            <input type="text" [(ngModel)]="newBlogPost.title" name="title" required class="w-full border border-gray-300 rounded-lg px-3 py-2 mb-4">
+            <label class="block font-medium mb-1">Content:</label>
+            <textarea [(ngModel)]="newBlogPost.content" name="content" required class="w-full border border-gray-300 rounded-lg px-3 py-2 mb-4"></textarea>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Blog Post</button>
+          </form>
+          <button (click)="closePopup()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded absolute bottom-0 right-0 mb-6 mr-6">Cancel</button>
+        </div>
+      </div>
+     
+     
+      
+    <div class="flex flex-wrap md:-m-2 -m-1">
+      <div class="flex flex-wrap w-1/2">
+        <div class="md:p-2 p-1 w-1/2">
+          <img
+          alt="hero"
+          src="https://source.unsplash.com/720x600/?hotels"
+          
+            class="w-full object-cover h-full object-center block"
+            src="https://source.unsplash.com/720x600/?hotels"
+          />
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+          <img
+          alt="hero"
+          src="https://source.unsplash.com/720x600/?nature"
+          id="nature"
+          
+            class="w-full object-cover h-full object-center block"
+           
+          />
+        </div>
+        <div class="md:p-2 p-1 w-full">
+          <img
+          alt="hero"
+          src="https://source.unsplash.com/720x600/?holiday,nature"
+          id="natureImage"
+            class="w-full h-full object-cover object-center block"
+           
+          />
+        </div>
+      </div>
+      <div class="flex flex-wrap w-1/2">
+        <div class="md:p-2 p-1 w-full">
+          <img
+          alt="hero"
+          id="natureImage"
+            class="w-full h-full object-cover object-center block"
+            src="https://source.unsplash.com/720x600/?tour,trip"
+          />
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+          <img
+          alt="hero"
+          id="natureImage"
+            class="w-full object-cover h-full object-center block"
+            src="https://source.unsplash.com/720x600/?beaches,parties"
+          />
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+          <img
+          alt="hero"
+          id="natureImage"
+            class="w-full object-cover h-full object-center block"
+            src="https://source.unsplash.com/720x600/?villas,luxories"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="container px-5 py-24 mx-auto flex flex-col" *ngIf="blogPosts.length > 0">
+    <h1 class="text-2xl font-semibold mb-4">Recent Blog Posts:</h1>
+    <ul>
+      <li *ngFor="let post of blogPosts" class="bg-white border border-gray-300 rounded-lg p-6 mb-4">
+        <div class="flex items-center mb-4">
+          <div class="w-full h-64">
+            <img class="object-cover object-center h-full w-full" src="{{ post.image }}" alt="{{ post.name }}'s image">
+          </div>
+          <div class="ml-4">
+            <h3 class="text-lg font-semibold">{{ post.name }}</h3>
+            <img src="{{ avatarUrls[post.name] }}" alt="{{ post.name }}'s avatar" class="w-10 h-10 rounded-full mr-4">
+            <p class="text-gray-700">{{ post.title }}</p>
+            <p class="text-gray-700">{{ post.content }}</p>
+            <button (click)="deleteBlogPost(post)" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4">Delete</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-col">
+    <div class="lg:w-4/6 mx-auto">
+      <div class="rounded-lg h-64 overflow-hidden">
+        <img
+          alt="content"
+          class="object-cover object-center h-full w-full"
+          src="https://img.traveltriangle.com/blog/wp-content/uploads/2019/11/Homestays-In-Alibaug_og_26th-nov.jpg"
+        />
+      </div>
+      <div class="flex flex-col sm:flex-row mt-10">
+        <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+          <div
+            class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400"
+          >
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-10 h-10"
+              viewBox="0 0 24 24"
+            >
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">
+              Manas
+            </h2>
+            <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
+          </div>
+        </div>
+        <p class="text-abc">
+          Alibaug is a town in the Raigad district of Maharashtra. The Alibaug
+          beach is the main beach in the town which is quite a popular beach for
+          planning beach holidays in Maharashtra. The beach here is very neat
+          and tidy and ideal for a long walk along the seaside.
+          <b> Which is the best time to visit Alibaug?</b> November to July is
+          the best time to visit Alibaug to enjoy the beaches. From August to
+          October, you can explore the region in the rainy days, which exposes
+          you to the lush green beauty of Alibaug. The weather from November to
+          February is cold and dry thus provides a perfect ambience for
+          sightseeing. Visit and enjoy the best things to do in Alibaug.
+          <b>What is special about Alibaug?</b> Alibaug is a beachside town in
+          the Raigad District that is surrounded by the Arabian Sea. It is known
+          for its ravishing beaches, ancient forts, and thrilling water sports.
+          It is the perfect place to take a break from your stressful life. It
+          is only 100 kilometres from Mumbai and well-connected by road, rail
+          and ferry
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container px-5 py-24 mx-auto flex flex-col">
+    <div class="lg:w-4/6 mx-auto">
+      <div class="rounded-lg h-64 overflow-hidden">
+        <img
+          alt="content"
+          class="object-cover object-center h-full w-full"
+          src="https://www.adotrip.com/public/images/city/master_images/5e4117bd1fb0f-Ratnagiri_Package_Tour.jpg"
+        />
+      </div>
+
+      <div class="flex flex-col sm:flex-row mt-10">
+        <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+          <div
+            class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400"
+          >
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-10 h-10"
+              viewBox="0 0 24 24"
+            >
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="flex flex-col items-center text-center justify-center">
+            <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">
+              Aman
+            </h2>
+            <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
+          </div>
+        </div>
+        <p class="text-abc">
+          A beautiful town with a nice serene atmosphere, it is a town that is
+          off the beaten track, and is not too well known as a tourist
+          destination. Its natural beauty has not gained prominence, since what
+          is highlighted is only The Ratnagiri Hapus Mango Variety. I was
+          stunned at the lovely town, which far surpassed my expectations.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+</section>
