@@ -1,4 +1,5 @@
 **Oliday**
+
 Oliday is a responsive Angular website that helps users plan their holidays by showing their journey ratings and blog posts. It enables users to discover new destinations and book accommodations, plan their itineraries, and explore India based on the experiences of other users.
 
 **Features**
